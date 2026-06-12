@@ -1,7 +1,0 @@
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=hobs
-DB_PASSWORD=password
-DB_NAME=personal_blog_db
-JWT_SECRET=IetPqtBo1yThD2K9foIe8pq1f5KxrIZFCuPW1jvbCQ2
-PORT=3000
