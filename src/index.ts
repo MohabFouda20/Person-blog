@@ -29,6 +29,7 @@ app.get("/", (req, res) => {
 // Initialize TypeORM and start server
 AppDataSource.initialize()
     .then(() => {
+        console.log("DATABASE_URL:", process.env.DATABASE_URL);
         console.log("Data Source has been initialized!");
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`);

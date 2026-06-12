@@ -24,11 +24,7 @@ npm install
 ### 3. Environment Variables
 Copy `.env.example` to `.env` (or create a new `.env` file) and fill in your details:
 ```env
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=your_postgres_username
-DB_PASSWORD=your_postgres_password
-DB_NAME=personal_blog_db
+DATABASE_URL=postgresql://your_postgres_username:your_postgres_password@localhost:5432/personal_blog_db
 JWT_SECRET=super_secret_jwt_key_please_change_me
 PORT=3000
 ```
