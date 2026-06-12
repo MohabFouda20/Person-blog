@@ -2,6 +2,7 @@ import "reflect-metadata";
 import express from "express";
 import { AppDataSource } from "./data-source";
 import authRoutes from "./routes/authRoutes";
+import postRoutes from "./routes/postRoutes";
 import { setupSwagger } from "./swagger";
 import * as dotenv from "dotenv";
 
@@ -13,8 +14,9 @@ const PORT = process.env.PORT || 3000;
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-// Mount the Auth routes
+// Mount the routes
 app.use("/auth", authRoutes);
+app.use("/posts", postRoutes);
 
 // Setup Swagger UI
 setupSwagger(app);
