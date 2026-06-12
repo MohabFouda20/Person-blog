@@ -1,5 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, ManyToOne } from "typeorm";
-import { User } from "./User";
+import type { Relation } from "typeorm";
+import type { User } from "./User";
 
 @Entity()
 export class Post {
@@ -15,6 +16,6 @@ export class Post {
     @CreateDateColumn()
     created_at!: Date;
 
-    @ManyToOne(() => User, user => user.posts, { onDelete: "CASCADE" })
-    author!: User;
+    @ManyToOne("User", "posts", { onDelete: "CASCADE" })
+    author!: Relation<User>;
 }
