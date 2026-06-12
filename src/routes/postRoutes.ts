@@ -75,7 +75,7 @@ router.post(
 /**
  * @swagger
  * /posts/{id}:
- *   put:
+ *   patch:
  *     summary: Update an existing post
  *     tags: [Posts]
  *     security:
